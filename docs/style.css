@@ -226,9 +226,11 @@ h2 {
     transform: translateY(-1px);
 }
 
-.btn-primary {
+.btn-primary,
+.project-card .btn {
     color: #111827;
     background: linear-gradient(135deg, #F8FAFC, #E0A899);
+    border: 1px solid rgba(224, 168, 153, 0.35);
 }
 
 .btn-secondary {
