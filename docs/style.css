@@ -114,6 +114,59 @@ body {
     margin-bottom: 0;
 }
 
+.wide-panel {
+    background: rgba(15, 23, 42, 0.92);
+    border: 1px solid var(--panel-border);
+    border-radius: 18px;
+    padding: 1rem 1.1rem;
+    box-shadow: 0 12px 28px rgba(2, 6, 23, 0.25);
+}
+
+.wide-panel h2 {
+    margin-top: 0;
+    font-size: 1.05rem;
+}
+
+.wide-panel p,
+.wide-panel h6 {
+    color: var(--muted);
+    margin-bottom: 0;
+}
+
+.wide-panel form {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+}
+
+.wide-panel label {
+    display: grid;
+    gap: 0.35rem;
+    color: var(--text);
+    font-weight: 600;
+}
+
+.wide-panel input,
+.wide-panel textarea,
+.wide-panel select {
+    width: 100%;
+    padding: 0.7rem 0.8rem;
+    border-radius: 12px;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    background: rgba(15, 23, 42, 0.95);
+    color: var(--text);
+    font: inherit;
+}
+
+.wide-panel textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.wide-panel button {
+    justify-self: start;
+}
+
 .site-header {
     width: 100%;
 }
@@ -237,4 +290,15 @@ h2 {
     color: var(--text);
     background: rgba(148, 163, 184, 0.08);
     border: 1px solid rgba(148, 163, 184, 0.25);
+}
+a:link {
+  color: rgba(224, 168, 153, 0.35); 
+}
+
+a:visited {
+  color: rgb(169, 141, 141); 
+}
+
+a:hover {
+  color: rgba(148, 163, 184, 0.8);
 }
