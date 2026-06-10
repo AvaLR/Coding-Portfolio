@@ -50,6 +50,27 @@
                         <p> AVTF/Photography Portfolio: <a href="https://film-photography-portfolio.weebly.com" target="_blank">https://film-photography-portfolio.weebly.com</a></p>
                     </article>
                 </div>
+
+                <article class="wide-panel">
+                    <h2>Contact Me</h2>
+                    <h6>Fill out the form below to get in touch with me! If the form doesn't submit, please email me directly at avaruss53@gmail.com</h6>
+                    <form action="contact_action" method="post">
+                        <label>First Name: <input type="text" name="first_name" required></label>
+                        <label>Last Name: <input type="text" name="last_name" required></label>
+                        <label>Email: <input type="email" name="email" required></label>
+                        <label>What Is This For: </label>
+                        <select name="reason" required>
+                            <option value="">Select a reason</option>
+                            <option value="job_opportunity">Job Opportunity</option>
+                            <option value="collaboration">Collaboration</option>
+                            <option value="general_inquiry">School Related</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <label>Message: <textarea name="message" required></textarea></label>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        
+                    </form>
+                </article>
             </section>
         </main>
     </body>
