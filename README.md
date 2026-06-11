@@ -10,5 +10,23 @@ Basic Code:
 Adjusted/More Advanced Code - A lot of CSS: 
 <img width="1439" height="813" alt="Screenshot 2026-06-10 at 1 29 21 PM" src="https://github.com/user-attachments/assets/f5d313e5-a822-44f3-b674-0af03fbe6eb8" />
 
+Features:
+<ol> 
+  <li> Home Page </li>
+  <li> About Me Page </li>
+  <li> Completed Projects Page </li>
+  <li> Individual Specific Project Details Pages </li>
+  <li> Contact Form </li>
+</ol>
+
+COMING SOON: 
+<ol>
+  <li> Resume Page </li>
+  <li> Skills Page (may combine with resume page tbd) </li>
+  <li> Competitions Page </li>
+</ol>
+
+Demo:
+
 
 Link To Look At My Portfolio: https://avalr.github.io/Coding-Portfolio/index.html
