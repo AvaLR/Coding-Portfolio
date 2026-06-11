@@ -283,7 +283,7 @@ h2 {
 .project-card .btn {
     color: #111827;
     background: linear-gradient(135deg, #F8FAFC, #E0A899);
-    border: 1px solid rgba(224, 168, 153, 0.35);
+    border: 1px solid rgb(224, 168, 153);
 }
 
 .btn-secondary {
@@ -291,14 +291,4 @@ h2 {
     background: rgba(148, 163, 184, 0.08);
     border: 1px solid rgba(148, 163, 184, 0.25);
 }
-a:link {
-  color: rgba(224, 168, 153, 0.35); 
-}
 
-a:visited {
-  color: rgb(169, 141, 141); 
-}
-
-a:hover {
-  color: rgba(148, 163, 184, 0.8);
-}
