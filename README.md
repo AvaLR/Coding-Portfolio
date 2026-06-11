@@ -26,7 +26,6 @@ COMING SOON:
   <li> Competitions Page </li>
 </ol>
 
-Demo:
-
 
 Link To Look At My Portfolio: https://avalr.github.io/Coding-Portfolio/index.html
+Credit: Although I personally did all the coding AI did help me a lot when trying to figure out how to deploy and update the gitpages as well as finding the errors.
