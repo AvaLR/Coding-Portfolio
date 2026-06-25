@@ -35,7 +35,7 @@
                             <li>Simple navigation</li>
                             <li>Easy way to share my work</li>
                         </ul>
-                        <!-- Opens window on click -->
+                    
                         <button class="btn btn-primary" onclick="openWindow('portfolio-window')">View Project Details</button>
                     </article>
 
@@ -54,29 +54,51 @@
                     </article>
                 </div>
             </section>
-
-            <!-- ========================================== -->
             <!-- DRAGGABLE WINDOW 1: PORTFOLIO DETAILS      -->
-            <!-- ========================================== -->
-            <div id="portfolio-window" class="draggable-window">
-                <div class="window-header">
-                    <span>📁 portfolio_site.html</span>
-                    <button class="close-btn" onclick="closeWindow('portfolio-window')">×</button>
-                </div>
-                <!-- This div maps directly to your exact styling classes -->
-                <div class="window-content page-card">
-                    <p class="eyebrow">Web Portfolio</p>
-                    <h1>Personal Portfolio Website</h1>
-                    <p class="page-intro">This is a placeholder for your deeper project details page. Put extra descriptions, project assets, images, or reflections right here!</p>
-                </div>
-            </div>
+            <!-- Draggable Window: Personal Portfolio Website -->
+<div class="window draggable-window" id="portfolio-project-window">
+    
+    <!-- Window Title Bar / Handle for Dragging -->
+    <div class="window-header">
+        <span class="window-title">Project: Personal Portfolio Website</span>
+        <div class="window-controls">
+            <button class="control-btn minimize-btn" onclick="minimizeWindow('portfolio-project-window')" aria-label="Minimize">&minus;</button>
+            <button class="control-btn maximize-btn" onclick="maximizeWindow('portfolio-project-window')" aria-label="Maximize">&#9633;</button>
+            <button class="control-btn close-btn" onclick="closeWindow('portfolio-project-window')" aria-label="Close">&times;</button>
+        </div>
+    </div>
 
-            <!-- ========================================== -->
-            <!-- DRAGGABLE WINDOW 2: SCIENCE FAIR DETAILS    -->
-            <!-- ========================================== -->
+    <!-- Inner Window Content Area -->
+    <div class="window-content">
+        <p class="eyebrow">Project detail</p>
+        <h1>Personal Portfolio Website</h1>
+        
+        <article class="mini-panel">
+            <h2>What this project does</h2>
+            <p>It shows my work and skills in one organized website that I can use to show possible employers or college admissions officers.</p>
+        </article>
+
+        <article class="mini-panel">
+            <h2>What I used</h2>
+            <p>I used HTML and CSS, and JavaScript for this project.</p>
+        </article>
+
+        <article class="mini-panel">
+            <h2>What I learned</h2>
+            <p>One thing I learned is how to add mini panels inside of a webpage which I love a lot. I also learned how to do draggable windows which are neat.</p>
+        </article>
+
+        <article class="mini-panel">
+            <h2>Repository</h2>
+            <p><a href="https://github.com/AvaLR/Coding-Portfolio" target="_blank" rel="noopener">GitHub Repository &rarr;</a></p>
+        </article>
+    </div>
+</div>
+
+            <!--- DRAGGABLE WINDOW 2: SCIENCE FAIR 25-26 DETAILS --->
             <div id="science-window" class="draggable-window">
                 <div class="window-header">
-                    <span>🤖 mini_app.html</span>
+                    <span>mini_app.html</span>
                     <button class="close-btn" onclick="closeWindow('science-window')">×</button>
                 </div>
                 <!-- This div maps directly to your exact styling classes -->

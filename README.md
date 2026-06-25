@@ -15,7 +15,7 @@ Features:
   <li> Home Page </li>
   <li> About Me Page </li>
   <li> Completed Projects Page </li>
-  <li> Individual Specific Project Details Pages </li>
+  <li> Draggable Individual Specific Project Details Pages </li>
   <li> Contact Form </li>
 </ol>
 

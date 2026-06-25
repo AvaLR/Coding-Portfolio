@@ -292,78 +292,117 @@ h2 {
     border: 1px solid rgba(148, 163, 184, 0.25);
 }
 
-.page-shell {
-    position: relative;
-    min-height: 100vh;
+/* Custom Design Color Variables */
+:root {
+    --theme-black: #111111;
+    --theme-navy: #0a192f;
+    --theme-rose-gold: #b76e79;
+    --theme-white: #ffffff;
 }
 
+/* The Main Window Body Framed in Black */
 .draggable-window {
-    display: none; 
     position: absolute;
     top: 15%;
     left: 25%;
     width: 650px;
     max-height: 75vh;
-    background: #ffffff;
-    border: 2px solid #333333;
+    background: var(--theme-white);
+    border: 2px solid var(--theme-black);
     border-radius: 8px;
-    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 15px 40px rgba(10, 25, 47, 0.15); /* Soft navy shadow tint */
     z-index: 10;
+    display: flex;
     flex-direction: column;
+    
+    /* Animation hooks from earlier setup */
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(15px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+.draggable-window.window-active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
 
+/* Beautiful Navy Blue Header Bar */
 .window-header {
-    background: #222222;
-    color: #ffffff;
+    background: var(--theme-navy);
+    color: var(--theme-white);
     padding: 12px 18px;
-    cursor: move; 
+    cursor: move;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     user-select: none;
-    font-family: monospace;
-    font-size: 14px;
+    border-bottom: 2px solid var(--theme-black);
 }
 
-
-.close-btn {
-    background: #ff5f56;
-    border: none;
-    color: #ffffff;
+/* Window File Title Text */
+.window-title {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
     font-weight: bold;
-    border-radius: 50%;
-    width: 22px;
-    height: 22px;
-    cursor: pointer;
+    letter-spacing: 0.5px;
+}
+
+/* Balance spacer element */
+.header-spacer {
+    width: 60px;
+}
+
+/* Control Dots Layout Block */
+.window-controls {
     display: flex;
+    gap: 8px;
+    width: 60px;
+    align-items: center;
+}
+
+/* Custom Theme Circles Structure */
+.theme-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+    border: none;
+    padding: 0;
+}
+
+/* Elegant Rose Gold accents */
+.theme-dot.accent-dot {
+    background: var(--theme-rose-gold);
+    opacity: 0.6; /* Gives a subtle depth distinction to non-clickable dots */
+}
+
+/* Distinctive Rose Gold interactive close button */
+.theme-dot.close-action {
+    background: var(--theme-rose-gold);
+    color: var(--theme-navy); /* Deep Navy text for crisp readability inside the dot */
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
     line-height: 1;
-    font-size: 14px;
-    transition: background 0.2s ease;
+    transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-.close-btn:hover {
-    background: #e04f47;
+.theme-dot.close-action:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1); /* Elegantly brightens metallic tone on mouse hover */
 }
 
-
-.window-content {
-    padding: 25px;
-    overflow-y: auto; 
-    flex-grow: 1;
-    color: #333333;
+/* Inner white panel display matching your core page layout card properties */
+.window-content.page-card {
+    background: var(--theme-white) !important;
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 25px !important;
 }
-
-.window-content .eyebrow {
-    margin-top: 0;
-}
-
-.window-content h1 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-}
-
