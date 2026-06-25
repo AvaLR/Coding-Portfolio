@@ -25,6 +25,7 @@
                 <h1>My Projects</h1>
                 <p class="page-intro"> </p>
                 <div class="project-grid">
+                    <!-- PROJECT CARD 1 -->
                     <article class="project-card">
                         <span class="project-tag">Web Portfolio</span>
                         <h2>Personal Portfolio Website</h2>
@@ -34,9 +35,11 @@
                             <li>Simple navigation</li>
                             <li>Easy way to share my work</li>
                         </ul>
-                        <a class="btn btn-primary" href="projects/portfolio-site.html">View Project Details</a>
+                        <!-- Opens window on click -->
+                        <button class="btn btn-primary" onclick="openWindow('portfolio-window')">View Project Details</button>
                     </article>
 
+                    <!-- PROJECT CARD 2 -->
                     <article class="project-card">
                         <span class="project-tag">Science Fair</span>
                         <h2>Latte Lies And Milky Myths: Detecting Adulterants With Machine Learning</h2>
@@ -46,10 +49,45 @@
                             <li>Conducted research on food adulteration and its health impacts</li>
                             <li>Presented findings at local science fairs</li>
                         </ul>
-                        <a class="btn btn-secondary" href="projects/mini-app.html">View Project Details</a>
+                        <!-- Opens window on click -->
+                        <button class="btn btn-secondary" onclick="openWindow('science-window')">View Project Details</button>
                     </article>
                 </div>
             </section>
+
+            <!-- ========================================== -->
+            <!-- DRAGGABLE WINDOW 1: PORTFOLIO DETAILS      -->
+            <!-- ========================================== -->
+            <div id="portfolio-window" class="draggable-window">
+                <div class="window-header">
+                    <span>📁 portfolio_site.html</span>
+                    <button class="close-btn" onclick="closeWindow('portfolio-window')">×</button>
+                </div>
+                <!-- This div maps directly to your exact styling classes -->
+                <div class="window-content page-card">
+                    <p class="eyebrow">Web Portfolio</p>
+                    <h1>Personal Portfolio Website</h1>
+                    <p class="page-intro">This is a placeholder for your deeper project details page. Put extra descriptions, project assets, images, or reflections right here!</p>
+                </div>
+            </div>
+
+            <!-- ========================================== -->
+            <!-- DRAGGABLE WINDOW 2: SCIENCE FAIR DETAILS    -->
+            <!-- ========================================== -->
+            <div id="science-window" class="draggable-window">
+                <div class="window-header">
+                    <span>🤖 mini_app.html</span>
+                    <button class="close-btn" onclick="closeWindow('science-window')">×</button>
+                </div>
+                <!-- This div maps directly to your exact styling classes -->
+                <div class="window-content page-card">
+                    <p class="eyebrow">Science Fair</p>
+                    <h1>Latte Lies And Milky Myths</h1>
+                    <p class="page-intro">This is a placeholder for your detailed science fair notes. Share your Python data pipelines, training accuracy, or display charts here!</p>
+                </div>
+            </div>
         </main>
+
+        <script src="projects-script.js"></script>
     </body>
 </html>
