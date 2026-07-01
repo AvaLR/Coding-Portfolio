@@ -36,7 +36,7 @@
                             <li>Easy way to share my work</li>
                         </ul>
                     
-                        <button class="btn btn-primary" onclick="openWindow('portfolio-window')">View Project Details</button>
+                        <button class="btn btn-primary" onclick="openWindow('portfolio-project-window')">View Project Details</button>
                     </article>
 
                     <!-- PROJECT CARD 2 -->
@@ -98,14 +98,40 @@
             <!--- DRAGGABLE WINDOW 2: SCIENCE FAIR 25-26 DETAILS --->
             <div id="science-window" class="draggable-window">
                 <div class="window-header">
-                    <span>mini_app.html</span>
-                    <button class="close-btn" onclick="closeWindow('science-window')">×</button>
+                    <span class="window-title">Science Fair Project</span>
+                    <div class="window-controls">
+                        <button class="control-btn minimize-btn" onclick="minimizeWindow('science-window')" aria-label="Minimize">&minus;</button>
+                        <button class="control-btn maximize-btn" onclick="maximizeWindow('science-window')" aria-label="Maximize">&#9633;</button>
+                        <button class="control-btn close-btn" onclick="closeWindow('science-window')" aria-label="Close">&times;</button>
+                    </div>
                 </div>
-                <!-- This div maps directly to your exact styling classes -->
                 <div class="window-content page-card">
-                    <p class="eyebrow">Science Fair</p>
+                    <p class="eyebrow">Project detail</p>
                     <h1>Latte Lies And Milky Myths</h1>
-                    <p class="page-intro">This is a placeholder for your detailed science fair notes. Share your Python data pipelines, training accuracy, or display charts here!</p>
+
+                    <div class="mini-panel">
+                        <h2>Project goal</h2>
+                        <p>Build a machine learning model that can identify adulterants in milk and coffee grains from images.</p>
+                    </div>
+
+                    <div class="mini-panel">
+                        <h2>Why it matters</h2>
+                        <p>Food adulteration can affect health and safety, so better detection tools can help protect consumers.</p>
+                    </div>
+
+                    <div class="mini-panel">
+                        <h2>What I learned</h2>
+                        <p>I strengthened my skills in research, image classification, and presenting technical ideas clearly.</p>
+                    </div>
+
+                    <div class="mini-panel">
+                        <h2>Awards</h2>
+                        <ul class="project-highlights">
+                            <li>Top 10 Science Fair</li>
+                            <li>Naval Science Award</li>
+                            <li>2nd Place Regional</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </main>
