@@ -307,10 +307,10 @@ h2 {
     left: 25%;
     width: 650px;
     max-height: 75vh;
-    background: linear-gradient(135deg, #fdfdfd 0%, #f4f7fb 100%);
-    border: 1px solid #1f2937;
+    background: #f8f7f4;
+    border: 1px solid rgba(17, 24, 39, 0.16);
     border-radius: 12px;
-    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.18);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
     z-index: 10;
     display: none;
     flex-direction: column;
@@ -339,8 +339,8 @@ h2 {
 
 /* Beautiful Navy Blue Header Bar */
 .window-header {
-    background: linear-gradient(135deg, #17233d 0%, #223a58 100%);
-    color: var(--theme-white);
+    background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+    color: #f8fafc;
     padding: 12px 18px;
     cursor: move;
     display: flex;
@@ -349,7 +349,7 @@ h2 {
     border-top-left-radius: 11px;
     border-top-right-radius: 11px;
     user-select: none;
-    border-bottom: 1px solid #7dd3fc;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 /* Window File Title Text */
@@ -384,9 +384,9 @@ h2 {
     font-weight: 700;
     cursor: pointer;
     transition: transform 0.2s ease, filter 0.2s ease;
-    color: #0f172a;
-    background: #f8fafc;
-    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.12);
+    color: #111827;
+    background: #f3f4f6;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.12);
 }
 
 .control-btn:hover {
@@ -395,13 +395,13 @@ h2 {
 }
 
 .control-btn.close-btn {
-    background: linear-gradient(135deg, #f97316, #ea580c);
-    color: white;
+    background: #e5e7eb;
+    color: #374151;
 }
 
 .control-btn.maximize-btn {
-    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
-    color: #1d4ed8;
+    background: #e5e7eb;
+    color: #374151;
 }
 
 /* Custom Theme Circles Structure */
@@ -439,17 +439,24 @@ h2 {
 }
 
 /* Inner white panel display matching your core page layout card properties */
+.window-content {
+    padding: 20px;
+    overflow-y: auto;
+    background: #f8f7f4;
+    color: #374151;
+}
+
 .window-content.page-card {
     background: transparent !important;
     box-shadow: none !important;
     border: none !important;
     margin: 0 !important;
-    padding: 25px !important;
+    padding: 20px !important;
 }
 
 .window-content .mini-panel {
-    background: rgba(248, 250, 252, 0.95);
-    border: 1px solid #dbe3ee;
+    background: #f3f4f6;
+    border: 1px solid rgba(17, 24, 39, 0.08);
     border-radius: 10px;
     padding: 16px;
     margin-bottom: 14px;
@@ -457,5 +464,5 @@ h2 {
 
 .window-content h1,
 .window-content h2 {
-    color: #17233d;
+    color: #1f2937;
 }
