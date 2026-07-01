@@ -296,21 +296,27 @@ h2 {
 :root {
     --theme-black: #111111;
     --theme-navy: #0a192f;
-    --theme-rose-gold: #b76e79;
+    --theme-rose-gold: #d9a38e;
     --theme-white: #ffffff;
+    --window-bg: #0a192f;
+    --window-border: rgba(224, 168, 153, 0.22);
+    --window-header: linear-gradient(135deg, #07111f 0%, #15213a 100%);
+    --window-control-bg: rgba(224, 168, 153, 0.12);
+    --window-control-color: #ffffff;
+    --window-content-bg: rgba(10, 25, 47, 0.96);
 }
 
-/* The Main Window Body Framed in Black */
+/* The Main Window Body Framed in Navy */
 .draggable-window {
     position: absolute;
     top: 15%;
     left: 25%;
     width: 650px;
     max-height: 75vh;
-    background: #f8f7f4;
-    border: 1px solid rgba(17, 24, 39, 0.16);
+    background: var(--window-bg);
+    border: 1px solid var(--window-border);
     border-radius: 12px;
-    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+    box-shadow: 0 16px 40px rgba(2, 6, 23, 0.32);
     z-index: 10;
     display: none;
     flex-direction: column;
@@ -339,8 +345,8 @@ h2 {
 
 /* Beautiful Navy Blue Header Bar */
 .window-header {
-    background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
-    color: #f8fafc;
+    background: var(--window-header);
+    color: var(--theme-white);
     padding: 12px 18px;
     cursor: move;
     display: flex;
@@ -349,7 +355,7 @@ h2 {
     border-top-left-radius: 11px;
     border-top-right-radius: 11px;
     user-select: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Window File Title Text */
@@ -358,6 +364,7 @@ h2 {
     font-size: 13px;
     font-weight: bold;
     letter-spacing: 0.5px;
+    color: var(--theme-white);
 }
 
 /* Balance spacer element */
@@ -375,7 +382,7 @@ h2 {
 .control-btn {
     width: 28px;
     height: 28px;
-    border: none;
+    border: 1px solid rgba(224, 168, 153, 0.22);
     border-radius: 999px;
     display: inline-flex;
     align-items: center;
@@ -383,25 +390,21 @@ h2 {
     font-size: 14px;
     font-weight: 700;
     cursor: pointer;
-    transition: transform 0.2s ease, filter 0.2s ease;
-    color: #111827;
-    background: #f3f4f6;
-    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.12);
+    transition: transform 0.2s ease, filter 0.2s ease, background-color 0.2s ease;
+    color: var(--window-control-color);
+    background: var(--window-control-bg);
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.18);
 }
 
 .control-btn:hover {
     transform: translateY(-1px);
     filter: brightness(1.05);
+    background: rgba(224, 168, 153, 0.2);
 }
 
-.control-btn.close-btn {
-    background: #e5e7eb;
-    color: #374151;
-}
-
+.control-btn.close-btn,
 .control-btn.maximize-btn {
-    background: #e5e7eb;
-    color: #374151;
+    color: var(--theme-white);
 }
 
 /* Custom Theme Circles Structure */
@@ -438,12 +441,12 @@ h2 {
     filter: brightness(1.1); /* Elegantly brightens metallic tone on mouse hover */
 }
 
-/* Inner white panel display matching your core page layout card properties */
+/* Inner navy panel content with rose gold accents */
 .window-content {
     padding: 20px;
     overflow-y: auto;
-    background: #f8f7f4;
-    color: #374151;
+    background: var(--window-content-bg);
+    color: var(--theme-white);
 }
 
 .window-content.page-card {
@@ -455,8 +458,8 @@ h2 {
 }
 
 .window-content .mini-panel {
-    background: #f3f4f6;
-    border: 1px solid rgba(17, 24, 39, 0.08);
+    background: rgba(15, 23, 42, 0.92);
+    border: 1px solid rgba(224, 168, 153, 0.18);
     border-radius: 10px;
     padding: 16px;
     margin-bottom: 14px;
@@ -464,5 +467,19 @@ h2 {
 
 .window-content h1,
 .window-content h2 {
-    color: #1f2937;
+    color: var(--theme-white);
+}
+
+.window-content .eyebrow,
+.window-content p,
+.window-content li {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.window-content h2 {
+    color: var(--theme-rose-gold);
+}
+
+.window-content .project-highlights li::marker {
+    color: var(--theme-rose-gold);
 }
