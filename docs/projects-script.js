@@ -2,19 +2,60 @@ let highestZ = 100;
 
 function openWindow(id) {
     const win = document.getElementById(id);
+    if (!win) return;
+
     win.style.display = 'flex';
+    win.classList.add('window-active');
     highestZ++;
-    win.style.zIndex = highestZ; 
-    
-    
+    win.style.zIndex = highestZ;
+
     if (!win.dataset.dragInitialized) {
         makeDraggable(win);
-        win.dataset.dragInitialized = "true";
+        win.dataset.dragInitialized = 'true';
     }
 }
 
 function closeWindow(id) {
-    document.getElementById(id).style.display = 'none';
+    const win = document.getElementById(id);
+    if (!win) return;
+
+    win.classList.remove('window-active');
+    win.style.display = 'none';
+}
+
+function toggleMaximizeWindow(id) {
+    const win = document.getElementById(id);
+    if (!win) return;
+
+    const isMaximized = win.dataset.maximized === 'true';
+
+    if (!isMaximized) {
+        win.dataset.previousTop = win.style.top || '15%';
+        win.dataset.previousLeft = win.style.left || '25%';
+        win.dataset.previousWidth = win.style.width || '650px';
+        win.dataset.previousHeight = win.style.height || 'auto';
+
+        win.classList.add('window-maximized');
+        win.style.top = '0';
+        win.style.left = '0';
+        win.style.width = '100%';
+        win.style.height = '100%';
+        win.style.maxHeight = '100vh';
+        win.dataset.maximized = 'true';
+    } else {
+        win.classList.remove('window-maximized');
+        win.style.top = win.dataset.previousTop || '15%';
+        win.style.left = win.dataset.previousLeft || '25%';
+        win.style.width = win.dataset.previousWidth || '650px';
+        win.style.height = win.dataset.previousHeight || 'auto';
+        win.style.maxHeight = '75vh';
+        win.dataset.maximized = 'false';
+    }
+
+    win.style.display = 'flex';
+    win.classList.add('window-active');
+    highestZ++;
+    win.style.zIndex = highestZ;
 }
 
 function makeDraggable(windowElement) {

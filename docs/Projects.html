@@ -62,9 +62,8 @@
     <div class="window-header">
         <span class="window-title">Project: Personal Portfolio Website</span>
         <div class="window-controls">
-            <button class="control-btn minimize-btn" onclick="minimizeWindow('portfolio-project-window')" aria-label="Minimize">&minus;</button>
-            <button class="control-btn maximize-btn" onclick="maximizeWindow('portfolio-project-window')" aria-label="Maximize">&#9633;</button>
-            <button class="control-btn close-btn" onclick="closeWindow('portfolio-project-window')" aria-label="Close">&times;</button>
+            <button class="control-btn maximize-btn" onclick="toggleMaximizeWindow('portfolio-project-window')" onmousedown="event.stopPropagation()" aria-label="Expand">&#9633;</button>
+            <button class="control-btn close-btn" onclick="closeWindow('portfolio-project-window')" onmousedown="event.stopPropagation()" aria-label="Close">&times;</button>
         </div>
     </div>
 
@@ -100,9 +99,8 @@
                 <div class="window-header">
                     <span class="window-title">Science Fair Project</span>
                     <div class="window-controls">
-                        <button class="control-btn minimize-btn" onclick="minimizeWindow('science-window')" aria-label="Minimize">&minus;</button>
-                        <button class="control-btn maximize-btn" onclick="maximizeWindow('science-window')" aria-label="Maximize">&#9633;</button>
-                        <button class="control-btn close-btn" onclick="closeWindow('science-window')" aria-label="Close">&times;</button>
+                        <button class="control-btn maximize-btn" onclick="toggleMaximizeWindow('science-window')" onmousedown="event.stopPropagation()" aria-label="Expand">&#9633;</button>
+                        <button class="control-btn close-btn" onclick="closeWindow('science-window')" onmousedown="event.stopPropagation()" aria-label="Close">&times;</button>
                     </div>
                 </div>
                 <div class="window-content page-card">
